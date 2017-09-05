@@ -1,1 +1,2 @@
-this is a oppo community base on nodejs and express
+/*一个简单的oppo社区，实现功能有注册登录，发帖，回复，关注，查看帖子信息，关注信息*/
+项目前台采用ejs模板渲染，后台采用node+express路由跳转实现，数据库采用mysql
