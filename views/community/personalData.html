@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <%-include("../templete/zySource.html") %>
+    <link rel="stylesheet" href="../../public/css/personalData.css">
+    <script src="../../public/js/personalData.js"></script>
+</head>
+<body>
+    <%-include("../templete/head.html") %>
+    <main class="cb clearfix">
+        <p class="emm">
+             <a href="/front/shequ" title="" class="first">OPPO社区<s></s></a>
+             <span>资料<u></u><s></s></span>
+        </p>
+
+        <div class="bck">
+            <!-- <a href="" title="" class="per"><img src="../images/14973085196928_avatar_big.jpg" alt=""></a> -->
+            <h1>留研</h1>
+            <h4>以后一个人走</h4>
+        </div>
+        <%-include("../templete/zyLeft.html" )%>
+        <%if(session&&session.user==userId){%>
+        <div id="edit_form" style='display: none'>
+            <form name='form1' id="form1" enctype="multipart/form-data" method="post">
+                <ul>
+                    <li>个人资料<a href="javascript:" class="close">x</a> </li>
+                    <li>
+                        <p>昵称</p>
+                        <input type="text" name="uname" id="username">
+                    </li>
+                    <li>
+                        <p>性别</p>
+                        <input type="radio" name="sex" value="male">
+                        男
+                        <input type="radio" name="sex" value="female">
+                        女
+                    </li>
+                    <li>
+                        <p>签名</p>
+                        <input type="text" name="userSig" id="sig">
+                    </li>
+                    <li>
+                        <p>头像</p>
+                        <input type="file" name="headIcon" id="headIcon" multiple>
+                    </li>
+                    <li>
+                        <button type="button" class="sub">提交</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+        <div class="mask" style="display:none"></div>
+        <%}%>
+        <div class="ahaha fr clearfix">
+                <dt>账户信息</dt>
+                <dd class="userInfo">
+                    <table>
+                        <tbody>
+                            <tr class="sex">
+                                <th>性别</th>
+                                <td>女</td>
+                            </tr>
+                            <tr class="username">
+                                <th>用户名</th>
+                                <td>音乐符號</td>
+                            </tr>
+                            <tr class="userid">
+                                <th>用户ID</th>
+                                <td>4916937</td>
+                            </tr>
+                            <tr class="uname">
+                                <th>昵称</th>
+                                <td>音乐符號</td>
+                            </tr>
+                            <tr class="uname">
+                                <th>积分</th>
+                                <td>27633</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </dd>
+                <%if(session&&session.user==userId){%>
+                <button class="edit">修改资料</button>
+                <%}%>
+                <!-- 账户信息结束 -->
+        </div>
+
+
+    </main>
+    <% -include("../templete/footer.html")%>
+</body>
+</html>

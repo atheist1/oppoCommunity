@@ -1,0 +1,130 @@
+/*
+* @Author: Marte
+* @Date:   2017-08-14 22:30:02
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-14 22:30:04
+*/
+*{
+        margin:0;
+        padding:0;
+    }
+    body{
+        text-align: center;
+        background: #F7FAFC;
+        overflow: hidden;
+        background: #fff;
+    }
+    a{
+        text-decoration:none;
+        color:#3f3f3f;
+        transition:all 1s ease;
+    }
+    a:hover{
+        color:#fcb69f;
+    }
+    /* 头部开始 */
+    #head{
+        width: 400px;
+        margin:0 auto;
+        margin-bottom:10px;
+    }
+    #Mycanvas{
+        position: absolute;
+        top: 0;
+        left: -28px;
+        width: 100%;
+    }
+    /* 留言板区域 */
+    #all{
+        position:relative;
+    }
+    #content{
+        width: 800px;
+        margin:0 auto;
+        border:1px solid #eee;
+        box-shadow:11px 4px 19px #333;
+        height:400px;
+        overflow-y:scroll;
+    }
+
+    .liuyan{
+        border:1px solid #333;
+        min-height:100px;
+        margin:10px;
+    }
+    .liuyan span{
+        display:inline-block;
+    }
+    .liuyan .name{
+        color: red;
+    }
+    .time{
+        margin-left:100px;
+    }
+    .del{
+        float:right;
+        display:none;
+    }
+
+    .del a:hover{
+        color:#987654;
+    }
+    #s1{
+        display: block;
+        width:800px;
+        margin:0 auto;
+        margin-top:50px;
+    }
+    input{
+        width: 800px;
+        height: 50px;
+        outline:none;
+        border:1px solid #d1e2e3;
+        padding:0;
+        word-break:break-all;
+
+    }
+    .userName{
+        width: 100px;
+    }
+    #btn{
+        display:block;
+        width: 200px;
+        margin:0 auto ;
+    }
+    #submit{
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        -o-user-select: none;
+        user-select: none;
+        padding: 10px 50px;
+        font-size: 18px;
+        line-height: 1.33;
+        border-radius: 6px;
+        color: #fff;
+        background-color: #5bc0de;
+        border-color: #46b8da;
+    }
+    .neirong{
+        text-indent:20px;
+    }
+    div.liuyan:nth-child(1){
+        /* background:-webkit-gradient(linear, 0 0, 0 bottom, from(#ffecd2), to(#fcb69f)); */
+        background-color:#fcb69f;
+        transition:all 1s ease;
+    }
+    #exit{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }

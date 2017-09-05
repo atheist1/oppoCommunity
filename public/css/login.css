@@ -1,0 +1,392 @@
+/*
+* @Author: Marte
+* @Date:   2017-07-27 15:41:17
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-22 10:10:59
+*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Myriad Pro", Arial, "FZLanTingHei-R-GBK", 方正兰亭黑, "Microsoft YaHei", 微软雅黑, STHeiti, 华文黑体, SimSun, 宋体, sans-serif;
+
+}
+body{
+    background-color:#fbfbfb;
+}
+a{
+    text-decoration: none;
+    color:#7b7b7b;
+    cursor: pointer;
+}
+ul,li,ol{
+    list-style: none;
+    margin: 0;
+}
+.container{
+    max-width: 1200px;
+    margin:0 auto;
+    padding:0 0.75rem;
+}
+.clearfix:after{
+    display: block;
+    content: '';
+    clear: both;
+
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+
+}
+img{
+    border: 0;
+    vertical-align: middle;
+    max-width: 100%;
+    height: auto;
+}
+/* header */
+#header{
+    min-height: 10px;
+    position: relative;
+    background-color:#2aad6f;
+}
+#header .w960{
+    width: 960px;
+    margin:0 auto;
+}
+#header #nav_header{
+    min-height: 10px;
+
+}
+#header #nav_header li{
+    float: left;
+    font-size: 0.8125rem;
+    vertical-align: top;
+    box-sizing:border-box;
+}
+#header #nav_header li:hover{
+     background: #47b488;;
+
+}
+#header #nav_header li a{
+    color:white;
+    display: block;
+    padding: 6px 20px 5px;
+    min-height: 28px;
+    font-size: 15px;
+}
+#header #nav_header li{
+    border-left: 1px solid #47b488;
+    display: inline-block;
+
+}
+#header #nav_header:last-of-type{
+     border-right: 1px solid #47b488;
+}
+
+/* 注册content */
+#content{
+    margin-top: 120px;
+
+}
+#content #login_box .main_box{
+    width: 320px ;
+    margin:0 auto;
+
+}
+#content  .logo{
+    background: url('../../public/images/logo.png');
+    width: 205px;
+    height: 34px;
+    background-size: 100% 100%;
+    margin: 0 auto 20px;
+}
+
+#content #login_box .main_box .title{
+    font-size: 18px;
+    color: #363636;
+    text-align: center;
+    font-weight: 800;
+}
+#content #login_box #login_form #input_area{
+    position: relative;
+    margin-top: 10px;
+}
+#content #login_box #login_form input{
+    display: block;
+    height: 40px;
+    line-height: 20px;
+    padding: 12px 16px;
+    font-size: 14px;
+    background: #fff;
+    width: 286px;
+    border: 1px solid #e2e2e2;
+    margin-left: 20px;
+}
+#content #login_box #login_form .input_area{
+    margin-top:25px;
+    position: relative;
+}
+#content #login_box #login_form .placeholder{
+    color: #c5c5c5;
+    position: absolute;
+    left: 60px;
+    top: 12px;
+    font-size:12px;
+}
+#content  #error{
+    color: rgb(255, 86, 86);
+    font-size:12px;
+    margin:10px 0 0 20px;
+    display:none;
+}
+#content #login_box #login_form .errorLink{
+    float: right;
+    font-size:12px;
+    margin:15px 12px 0 0;
+    color: #00925f;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#content #login_box #login_form #login_btn{
+    color: #fff;
+    background: #2aad6f;
+    display: block;
+    text-align: center;
+    width: 290px;
+    margin :60px 0 20px 20px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    cursor: pointer;
+    border:none;
+}
+#content #login_box #login_form #login_btn:hover{
+    background: #47b488;
+}
+#content #login_box #login_form #register_btn{
+    background: #fff;
+    border: 1px solid #e2e2e2;
+    color: #363636;
+    display: block;
+    text-align: center;
+    width: 290px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    margin :20px 0 20px 20px;
+}
+#content #login_box #login_form #register_btn:hover{
+    background: #e1e1e1;
+}
+#content #login_box #login_info #other .other_head{
+    background: url(../../public/images/ico_title.png);
+    width: 290px;
+    height: 23px;
+    margin: 0 auto;
+}
+#content #login_box #login_info #other .other_link{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    margin: 20px 0 0 40px;
+    text-indent: -9999px;
+    vertical-align: middle;
+}
+#content #login_box #login_info #other .qq{
+    background:url('../../public/images/ico_qq.jpg');
+    background-size: 100% 100%;
+}
+#content #login_box #login_info #other .wx{
+    background:url('../../public/images/ico_wx.jpg');
+    background-size: 100% 100%;
+}
+#content #login_box #login_info #other .zfb{
+    background:url('../../public/images/ico_alipay.jpg');
+    background-size: 100% 100%;
+}
+#content #login_box #login_info #other .wb{
+    background:url('../../public/images/ico_wb.jpg');
+    background-size: 100% 100%;
+}
+
+/* 注册content */
+#content #register_box{
+    background: #fff;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    width: 958px;
+    margin: -20px auto 0;
+}
+#content #register_box .register_title{
+    color: #363636;
+    font-size: 20px;
+    text-align: center;
+    height: 110px;
+    line-height: 110px;
+    border-bottom: 1px solid #e1e1e1;
+}
+#content #register_box #register_form{
+    width: 320px;
+    margin: 0 auto;
+    padding-top: 90px;
+    height: 484px;
+}
+#content #register_box #register_form .input_area{
+    margin-top:25px;
+    position: relative;
+}
+#content #register_box #register_form .placeholder{
+    color: #c5c5c5;
+    position: absolute;
+    left: 60px;
+    top: 12px;
+    font-size:12px;
+}
+#content #register_box #register_form input{
+    display: block;
+    height: 40px;
+    line-height: 20px;
+    padding: 12px 16px;
+    font-size: 14px;
+    background: #fff;
+    width: 286px;
+    border: 1px solid #e2e2e2;
+    margin-left: 20px;
+}
+#content #register_box #register_form .checked{
+    background: url(../images/checked.jpg) no-repeat;
+    background-size: 15px auto;
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+    display: inline-block;
+
+    background-size: 15px auto;
+    vertical-align: middle;
+}
+#content #register_box #register_form .check{
+    margin-top: 20px;
+    margin-left:20px;
+}
+#content #register_box #register_form .check span{
+    font-size:12px;
+    color:grey;
+    margin-left:10px;
+}
+#content #register_box #register_form .check span a{
+    color: #00925f;
+}
+#content #register_box #register_form .unchecked{
+    width: 15px;
+    height: 15px;
+    margin-right: 2px;
+    display: inline-block;
+    background: url(../images/unchecked.jpg) no-repeat;
+    background-size: 15px auto;
+    vertical-align: middle;
+}
+#content #register_box #register_form #register_btn{
+    color: #fff;
+    background: #2aad6f;
+    display: block;
+    text-align: center;
+    width: 290px;
+    margin :60px 0 20px 20px;
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    cursor: pointer;
+    border:none;
+}
+#content #register_box #register_form #register_btn:hover{
+    background: #47b488;
+}
+#content #register_box #register_form #error{
+    color: rgb(255, 86, 86);
+    font-size:12px;
+    margin:10px 0 0 20px;
+    display:none;
+}
+
+/* validate content */
+#content #validate_tip{
+    text-align: center;
+    color: #363636;
+    line-height: 22px;
+    font-size:14px;
+    width: 320px;
+    margin:40px auto;
+}
+#content #validate_tip .phoneNum{
+    color: rgb(0, 146, 95);
+}
+#content  .input_area{
+    margin-top:25px;
+    position: relative;
+    width: 320px;
+    margin:20px auto;
+}
+#content  .placeholder{
+    color: #c5c5c5;
+    position: absolute;
+    left: 60px;
+    top: 12px;
+    font-size:12px;
+}
+#content  input{
+    display: block;
+    height: 40px;
+    line-height: 20px;
+    padding: 12px 16px;
+    font-size: 16px;
+    background: #fff;
+    width: 136px;
+    border: 1px solid #e2e2e2;
+    margin-left: 20px;
+}
+#content  input#validate{
+    width: 136px;
+}
+
+#content  input#next{
+    cursor: pointer;
+    background: #2aad6f;
+    width: 304px;
+    color:#fff;
+}
+#content .validatePas input{
+    width: 302px;
+
+}
+#content  #next:hover{
+    background-color:#47b488;
+}
+#content  input#confirm{
+
+    width: 136px;
+}
+#content  .confirm{
+    background:#9e9e9e;
+    cursor: pointer;
+    width: 136px;
+
+}
+#content  .confirm_active{
+    background: #2aad6f;
+    color: #fff;
+    cursor: pointer;
+
+}
+/* footer */
+footer{
+    color: #7b7b7b;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 30px;
+    padding: 24px 0;
+    position: relative;
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <%-include("../templete/zySource.html") %>
+    <script type="text/javascript" src='../../public/js/zyTie.js'></script>
+    <link rel="stylesheet" type="text/css" href="../../public/css/zy.css">
+
+    <title>主页</title>
+</head>
+<body>
+    <!-- 导航开始 -->
+    <%-include("../templete/head.html") %>
+    <!-- /header -->
+    <main class="cb clearfix">
+        <p class="emm">
+             <a href="/front/shequ" title="" class="first">OPPO社区<s></s></a>
+             <span>主页<u></u><s></s></span>
+        </p>
+        <div class="bck">
+            <a href="" title="" class="per"><img src="../images/14973085196928_avatar_big.jpg" alt=""></a>
+            <h1>留研</h1>
+            <h4>以后一个人走</h4>
+            <button type="button" id="focus" class="">+关注</button>
+        </div>
+        <%-include("../templete/zyLeft.html" )%>
+        <div class="ahaha fr clearfix">
+                <%if(session&&session.user==userId){%>
+                <dt id="noteCount">我的动态(<span>0</span>)</dt>
+                <%}else{%>
+                    <dt id="noteCount">TA的动态(<span>0</span>)</dt>
+                <%}%>
+                <div class="mainBody_container">
+                    <div class="mainLeft_container">
+                        <div class="mainLeft">
+                            <!-- <ul class="tiezi">
+                                <li class="userhead">
+                                    <a href="">
+                                        <img src="../images/head01.jpg">
+                                    </a>
+                                </li>
+                                <li class="username">
+                                    <a href="">浮_笙</a>
+                                    <span>Lv4.高中生O粉</span>
+                                    <p>
+                                        <a href=""></a>
+                                        <span>
+                                            <a href="" class="focus"><i></i>关注</a>
+                                            <a href="" class="shoucang"><i></i>收藏</a>
+                                            <a href="" class="jubao"><i></i>举报</a>
+                                        </span>
+                                    </p>
+                                </li>
+                                <li class="tz_time">17小时前 来自 OPPO R9s.这一刻 更清晰</li>
+                                <li class="tz_title">
+                                    <p>
+                                        <a href="" class="font_gre">#像电影一样生活#</a>
+                                        <a href="" class="font_gre">#黄昏时刻#</a>
+                                        <a href="" class="font_gre">#用手机记录生活#</a>
+                                        最美是无意中的风景醉在旅途的那缕微光
+                                    </p>
+                                </li>
+                                <li class="tz_pic">
+                                    <a href="" class="img_list">
+                                        <span><img src="../images/01-1.jpg" alt=""></span>
+                                        <span><img src="../images/01-2.jpg" alt=""></span>
+                                        <span><img src="../images/01-3.jpg" alt=""></span>
+                                    </a>
+                                </li>
+                                <li class="tz_res">
+                                    <a href="#" class="res-1"><i></i>123</a>
+                                    <a href="#" class="res-2"><i></i>123</a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- 帖子区域结束 -->
+        </div>
+    </main>
+    <%-include("../templete/footer.html") %>
+</body>
+</html>

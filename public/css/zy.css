@@ -1,0 +1,243 @@
+/*
+* @Author: Marte
+* @Date:   2017-08-19 16:03:59
+* @Last Modified by:   Marte
+* @Last Modified time: 2017-08-22 17:41:50
+*/
+
+
+
+/*帖子区域开始*/
+.mainRight .mainRight_title,.mainLeft .mainLeft_title,.frilink_title{
+    font-size: 18px;
+    line-height: 3em;
+    padding: 0 20px;
+    background-color: #e5e5e5;
+}
+
+.mainLeft_container{
+
+    margin-bottom: 20px;
+}
+#dao .zhu{
+    border-right: #3FCAB8 4px solid;
+    color: #3FCAB8;
+}
+#others_dao .zhu{
+    border-right: #3FCAB8 4px solid;
+    color: #3FCAB8;
+}
+/*帖子区域开始*/
+.tiezi{
+    position: relative;
+    padding: 30px 26px 24px 20px;
+    margin:1px;
+}
+
+.tiezi .username,.tz_title,.tz_pic,.tz_res{
+    margin: 10px 0 0 76px;
+}
+.tiezi .username,.tz_title .font_gre{
+    color: #3fcab8;
+}
+.tiezi .userhead{
+    position: absolute;
+    top: 30px;
+    left: 20px;
+}
+
+.tiezi .userhead a {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.tiezi .userhead a img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.tiezi .username{
+    font-size: 16px;
+    position: relative;
+}
+
+.tiezi .username span{
+    color: #ffb267;
+    margin-left: 10px;
+}
+
+.tiezi .username p{
+    position: absolute;
+    top: -20px;
+    right: 0;
+    z-index: 1;
+    width: 23px;
+    height: 23px;
+}
+
+.tiezi .username p>a{
+    background: url(../../public/images/community/ico.png) -120px 0;
+    height: 29px;
+    width: 23px;
+    display: inline-block;
+}
+
+.tiezi .username p span{
+    border: 1px solid #ccc;
+    border-radius: 4px 0 4px 4px;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    width: 85px;
+    top: 29px;
+    right: 0;
+}
+
+.tiezi .username p span:before,.tiezi .username p span:after{
+    border-style: dashed dashed solid;
+    border-color: transparent transparent #ccc;
+    border-width: 0 0 8px 10px;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -1px;
+}
+
+.tiezi .username p span:after{
+    border-bottom-color: #fff;
+    top: -6px;
+    right: 0;
+}
+
+.tiezi .username p span a{
+    border-top: 1px solid #ccc;
+    margin-top: -1px;
+    padding: .5em 10px;
+    font-size: 14px;
+    line-height: 23px;
+    display: block;
+}
+
+.tiezi .username p span a i{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+.tiezi .username p>span .focus i{
+    background: url(../../public/images/community/ico.png) -120px -60px;
+}
+
+.tiezi .username p>span .shoucang i{
+    background: url(../../public/images/community/ico.png) -120px -90px;
+}
+
+.tiezi .username p>span .jubao i{
+    background: url(../../public/images/community/ico.png) -120px -120px;
+}
+
+.tiezi .tz_time{
+    position: absolute;
+    bottom: 24px;
+    left: 20px;
+    line-height: 23px;
+    color: #999;
+    margin-left: 76px;
+    font-size: 12px;
+}
+
+.tiezi .tz_title{
+    margin-bottom: 8px;
+    margin-top: 20px
+}
+
+.tiezi .tz_title p{
+    max-height: 3em;
+    overflow: hidden;
+}
+
+.tiezi .tz_pic{
+    margin-bottom: 12px;
+}
+
+.tiezi .tz_pic span{
+    width: 24%;
+    padding-top: 24%;
+    margin-right: 2%;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.tiezi .tz_pic span img{
+    position: absolute;
+    top: 0px;
+    left: -40.3008px;
+    width: auto;
+    height: 100%;
+}
+
+.tiezi .tz_res{
+    text-align: right;
+    padding-top: 10px;
+}
+
+.tiezi .tz_res a{
+    margin-left: 20px;
+    color: #999;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 23px;
+    font-size: 12px;
+}
+
+.tiezi .tz_res a i{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+}
+
+.tiezi .tz_res a.res-1 i{
+    background:url(../../public/images/community/ico.png) -80px 0px;
+}
+
+.tiezi .tz_res a.res-2 i{
+    background:url(../../public/images/community/ico.png) -80px -90px;
+}
+
+.tiezi .tz_res a.love i{
+    background:url(../../public/images/community/ico.png) -80px -120px;
+}
+.tiezi .tz_res .res-2:hover{
+    color: #FF4951;
+}
+.tiezi .tz_res .res-2:hover i{
+    background-position:-80px -120px;
+}
+.tiezi .tz_res .res-2 .hover{
+    background-position:-80px -120px;
+}
+/*帖子区域结束*/
+
+/*友情链接开始*/
+.frilink{
+    padding:15px;
+    background-color: #fff;
+}
+
+.frilink a{
+    margin: 5px;
+    display: inline-block;
+    font-size: 12px;
+}
+
+/*友情链接结束*/

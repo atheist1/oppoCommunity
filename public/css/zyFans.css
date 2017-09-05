@@ -1,0 +1,194 @@
+
+/*通用开始*/
+
+
+.font_gre,a:hover,.footer_middle a:hover {
+    color: #3fcab8;
+}
+
+.Btn, a, button {
+    cursor: pointer;
+}
+
+/*通用结束*/
+
+.container{
+    line-height: 40px;
+}
+main{
+    margin-top: 20px;
+    padding-bottom: 11em;
+    max-width: 1080px;
+    margin: 0 auto;
+
+}
+/* main */
+.ahaha{
+    position: relative;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 #D5D5D5;
+    background-color: #fff;
+    width: 790px;
+
+}
+
+.ahaha dt{
+    background-color: #e5e5e5;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+/*箭头区域开始*/
+.cb .main_top{
+	margin: 20px 0;
+}
+
+.cb .main_top .First{
+	padding-left: 18px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+
+.main_top a, .main_top span {
+    box-shadow: 0 1px 0 #D5D5D5;
+    margin-right: 6px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    background-color: #fff;
+    font-size: 14px;
+    padding: 0 18px 0 36px;
+    position: relative;
+}
+
+.main_top a s, .main_top a u, .main_top span s, .main_top span u {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 25px dashed transparent;
+    border-left: 18px solid #f0f0f0;
+    border-right: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.main_top a s, .main_top span s{
+    left: auto;
+    right: -18px;
+    border-left: 18px solid #fff;
+    z-index: 1;
+}
+/*箭头区域结束*/
+
+
+
+.mainLeft_container{
+    margin-bottom:0 !important;
+}
+.tiezi-container{
+    border-radius: 2px;
+    box-shadow: 0 1px 0 #D5D5D5;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.tiezi-container .tiezi{
+    border-top: 1px solid #eee;
+    padding: 25px 22px;
+    margin-top: -1px;
+    position: relative;
+}
+
+.tiezi-container .tiezi .Follow{
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    margin-top: -14px;
+    min-width: 3em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 1em;
+    padding: 0 .7em;
+    font-size: 14px;
+    line-height: 26px;
+    border: 1px solid #3FCAB8;
+    background-color: #EEFAF9;
+    color: #3FCAB8;
+}
+
+.tiezi-container .tiezi .userhead{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    float: left;
+    display: block;
+}
+
+.tiezi-container .tiezi .userhead img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.tiezi-container .tiezi h2{
+    font-size: 16px;
+    margin-top: 0.5em;
+    margin-left: 80px;
+    margin-right: 100px;
+    overflow: hidden;
+    font-weight: 400;
+    height: 1.5em;
+}
+
+.tiezi-container .tiezi h2 i{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+}
+
+.tiezi-container .tiezi h2 .female{
+     background: url(../../public/images/community/ico.png) -40px -60px;
+}
+
+.tiezi-container .tiezi h2 .male{
+     background: url(../../public/images/community/ico.png) -40px -90px;
+}
+
+.tiezi-container .tiezi h2 .Group {
+    color: #ffb267;
+    margin-left: 10px;
+}
+
+.tiezi-container .tiezi p {
+    font-size: 14px;
+    margin-left: 80px;
+    margin-right: 100px;
+    overflow: hidden;
+    color: #999;
+}
+.focus{
+    position: absolute;
+    right: 22px;
+    top: 50%;
+    margin-top: -14px;
+    min-width: 3em;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 1em;
+    padding: 0 .7em;
+    font-size: 14px;
+    line-height: 26px;
+    border: 1px solid #3FCAB8;
+    background-color: #EEFAF9;
+    color: #3FCAB8;
+}
+

@@ -1,0 +1,29 @@
+
+<div class="olala">
+    <aside class="ceb">
+        <ul id="box" class="box">
+            <li><a href=""><b>42</b><span>关注</span></a></li>
+            <li><a href=""><b>122</b><span>粉丝</span></a></li>
+            <li><a href=""><b>258</b><span>访客</span></a></li>
+        </ul>
+    </aside>
+    <%
+        if(session&&session.user==userId){
+    %>
+    <nav class="dao" id="dao" >
+        <a href=<%='/front/zhuye/'+userId%> title="" class="zhu" data-userId=<%=userId%> id="myzy"><i></i>WO的主页</a>
+        <a href=<%='/front/data/'+userId%> title="" class="zi"><i></i>WO的资料</a>
+        <a href=<%='/front/focus/'+userId%> title="" class="tie"><i></i>WO的关注</a>
+        <a href=<%='/front/fans/'+userId%> title="" class="vip"><i></i>WO的粉丝</a>
+    </nav>
+    <%
+        }else if(session.user!=userId){
+    %>
+    <nav class="dao"  id="others_dao">
+        <a href=<%='/front/zhuye/'+userId%> title="1" class="zhu" data-userId=<%=userId%> id="otherzy"><i></i>TA的主页</a>
+        <a href=<%='/front/data/'+userId%> title="" class="zi"><i></i>TA的资料</a>
+        <a href=<%='/front/focus/'+userId%> title="" class="tie"><i></i>TA的关注</a>
+        <a href=<%='/front/fans/'+userId%> title="" class="vip"><i></i>TA的粉丝</a>
+    </nav>
+    <%}%>
+</div>

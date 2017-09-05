@@ -1,0 +1,133 @@
+/*个人信息区域开始*/
+.mainLeft{
+    border-radius: 2px;
+    box-shadow: 0 1px 0 #D5D5D5;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.self{
+    overflow: hidden;
+}
+
+.self li{
+    border-top: 1px solid #eee;
+    padding: 25px 22px;
+    margin-top: -1px;
+    position: relative;
+}
+
+.self li .uhead{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    float: left;
+    display: block;
+}
+
+.self li .uhead img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.self li h2{
+    font-size: 16px;
+    height: 1.5em;
+    margin-top: .5em;
+    margin-bottom: 3px;
+    margin-left: 80px;
+    margin-right: 100px;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+.self li h2 i{
+    width: 23px;
+    height: 23px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 5px;
+    background:url(../images/ico.png) -40px -90px;
+}
+
+.self li h2 span{
+    color: #ffb267;
+    margin-left: 10px;
+}
+
+.self li p{
+    margin:0;
+    font-size: 14px;
+    margin-left: 80px;
+    margin-right: 100px;
+    overflow: hidden;
+    color: #999;
+}
+/*个人信息区域结束*/
+/* content区域 */
+#content{
+    // height:500px;
+    background-color:#FFF;
+    width:49.375rem;
+}
+#content #time{
+    padding:50px 20px;
+    color:#999;
+}
+#content #time .like{
+    float:right;
+    margin-right:15px;
+    color:#999;
+}
+#content #title{
+    padding-left: 20px;
+
+}
+#content #title a{
+    color:#3fcab8;
+}
+#content img{
+    margin:10px 20px;
+}
+#content #comment{
+    border-top:1px solid #eee;
+    margin:10px 20px;
+    padding: 30px 0;
+}
+#content #comment input{
+    width:100%;
+    height:100px;
+    outline:none;
+}
+#content #comment button{
+    float: right;
+    border-radius: 2px;
+    padding: 0 1.5em;
+    background-color: #3fcab8;
+    border: 1px solid #3fcab8;
+    color: #fff;
+    font-size: 14px;
+    line-height: 2em;
+    margin:10px 0;
+}
+#content img{
+    max-width:90%;
+}
+#commentContent{
+    width: 49.375rem;
+}
+#commentContent #comTit{
+    background-color:#e5e5e5;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding:20px 10px;
+    font-weight:500;
+}
+#commentContent #comTit p{
+    font-weight:600;
+}
+.res-1 i{
+    background: url('../images/community/ico.png') 0 0;
+    background-position: -80px -150px!important;
+}

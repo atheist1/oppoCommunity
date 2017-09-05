@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>注册</title>
+    <script src="../../public/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../../public/js/register.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/login.css">
+</head>
+<body>
+
+    <main id="content">
+        <div id="register_box" class="container">
+            <div class="register_title">
+                注册帐号
+            </div>
+            <div id="register_form">
+                <div class="input_area">
+                    <input type="text" name="username" value="">
+                    <label class="placeholder">请输入用户名(邮箱或者手机号)</label>
+                </div>
+                <div class="input_area">
+                    <input type="password" name="password" value="">
+                    <label class="placeholder">请输入密码</label>
+                </div>
+                <div class="input_area">
+                        <input type="text" name="uname" value="">
+                        <label class="placeholder">请输入您的昵称</label>
+                </div>
+                <div id="error">
+                        账号非法
+                    </div>
+                <div class="fl check">
+                    <label id="checkbox" class="checked"></label>
+                    <span>已阅读并同意<a href="#">《帐号注册协议》</a></span>
+                </div>
+                <button type="button" id="register_btn">注册</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2005 - 2017 东莞市永盛通信科技有限公司 版权所有 粤ICP备08130115号-1</p>
+    </footer>
+</body>
+</html>

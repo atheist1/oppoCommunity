@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<link rel="stylesheet" type="text/css" href="../../public/css/liuyan.css">
+<script type="text/javascript" src='../../public/js/jquery-1.11.1.min.js'></script>
+<script type="text/javascript" src='../../public/js/liuyan.js'></script>
+<body>
+    <h1 id="head">欢迎</h1>
+    <!-- canvas背景 -->
+    <canvas id="Mycanvas"></canvas>
+    <script type='text/javascript'>//定义画布宽高和生成点的个数
+        var WIDTH = window.innerWidth, HEIGHT = window.innerHeight, POINT = 35;
+
+        var canvas = document.getElementById('Mycanvas');
+        canvas.width = WIDTH,
+        canvas.height = HEIGHT;
+        var context = canvas.getContext('2d');
+        context.strokeStyle = 'rgba(0,0,0,0.02)',
+        context.strokeWidth = 1,
+        context.fillStyle = 'rgba(0,0,0,0.05)';
+        var circleArr = [];
+
+        //线条：开始xy坐标，结束xy坐标，线条透明度
+        function Line (x, y, _x, _y, o) {
+            this.beginX = x,
+            this.beginY = y,
+            this.closeX = _x,
+            this.closeY = _y,
+            this.o = o;
+        }
+        //点：圆心xy坐标，半径，每帧移动xy的距离
+        function Circle (x, y, r, moveX, moveY) {
+            this.x = x,
+            this.y = y,
+            this.r = r,
+            this.moveX = moveX,
+            this.moveY = moveY;
+        }
+        //生成max和min之间的随机数
+        function num (max, _min) {
+            var min = arguments[1] || 0;
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+        // 绘制原点
+        function drawCricle (cxt, x, y, r, moveX, moveY) {
+            var circle = new Circle(x, y, r, moveX, moveY)
+            cxt.beginPath()
+            cxt.arc(circle.x, circle.y, circle.r, 0, 2*Math.PI)
+            cxt.closePath()
+            cxt.fill();
+            return circle;
+        }
+        //绘制线条
+        function drawLine (cxt, x, y, _x, _y, o) {
+            var line = new Line(x, y, _x, _y, o)
+            cxt.beginPath()
+            cxt.strokeStyle = 'rgba(0,0,0,'+ o +')'
+            cxt.moveTo(line.beginX, line.beginY)
+            cxt.lineTo(line.closeX, line.closeY)
+            cxt.closePath()
+            cxt.stroke();
+
+        }
+        //初始化生成原点
+        function init () {
+            circleArr = [];
+            for (var i = 0; i < POINT; i++) {
+                circleArr.push(drawCricle(context, num(WIDTH), num(HEIGHT), num(15, 2), num(10, -10)/40, num(10, -10)/40));
+            }
+            draw();
+        }
+
+        //每帧绘制
+        function draw () {
+            context.clearRect(0,0,canvas.width, canvas.height);
+            for (var i = 0; i < POINT; i++) {
+                drawCricle(context, circleArr[i].x, circleArr[i].y, circleArr[i].r);
+            }
+            for (var i = 0; i < POINT; i++) {
+                for (var j = 0; j < POINT; j++) {
+                    if (i + j < POINT) {
+                        var A = Math.abs(circleArr[i+j].x - circleArr[i].x),
+                            B = Math.abs(circleArr[i+j].y - circleArr[i].y);
+                        var lineLength = Math.sqrt(A*A + B*B);
+                        var C = 1/lineLength*7-0.009;
+                        var lineOpacity = C > 0.03 ? 0.03 : C;
+                        if (lineOpacity > 0) {
+                            drawLine(context, circleArr[i].x, circleArr[i].y, circleArr[i+j].x, circleArr[i+j].y, lineOpacity);
+                        }
+                    }
+                }
+            }
+        }
+
+        //调用执行
+        window.onload = function () {
+            init();
+            setInterval(function () {
+                for (var i = 0; i < POINT; i++) {
+                    var cir = circleArr[i];
+                    cir.x += cir.moveX;
+                    cir.y += cir.moveY;
+                    if (cir.x > WIDTH) cir.x = 0;
+                    else if (cir.x < 0) cir.x = WIDTH;
+                    if (cir.y > HEIGHT) cir.y = 0;
+                    else if (cir.y < 0) cir.y = HEIGHT;
+
+                }
+                draw();
+            }, 16);
+        }
+    </script>
+    <%-include("../templete/head.html") %>
+    <div id="exit">
+
+        <a href="/logout" id="tuichu">退出</a>
+    </div>
+    <div id="all">
+        <div id="content"></div>
+        <label id="s1"><input type="text" name="supply" value="" id="supply"></label>
+        <label id="btn"><button type="button" id="submit">提交</button></label>
+    </div>
+ <!-- <script>
+
+
+
+      (function(){
+            var jzXhr=new XMLHttpRequest();
+            jzXhr.open('get','/loadContent',true);
+            jzXhr.onreadystatechange=function(){
+
+                if(jzXhr.readyState===4&&jzXhr.status===200){
+                var jzData=JSON.parse(jzXhr.responseText);
+                    for(let i=jzData.length-1;i>=0;i--){
+                        jzData[i].userName==userName?bl='block':bl='none';
+                        content.innerHTML+='<div class="liuyan" data-contentId='+jzData[i].contentId+'><span class="name">网友&nbsp;&nbsp;:&nbsp;&nbsp;</span><span class="userName">'+jzData[i].userName+'</span><span class="time">发表时间:<span>'+jzData[i].time+'</span></span><div class="del" style="display:'+bl+'"><a href="#">删除</a></div><br><span class="neirong">'+jzData[i].content+'</span></div>'
+                    }
+                }
+            }
+            jzXhr.send();
+        })()
+
+        // 提交留言
+        submit.onclick=function(){
+        var obj={};
+        var date=new Date();
+            if(supply.value!=''){
+                // ajax请求，请求返回结果并置顶最高
+                var xhr=new XMLHttpRequest();
+                var str;
+
+                xhr.open('post','/saveContent',true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                obj.userName=userName;
+                obj.userId=userId;
+                obj.content=supply.value;
+                obj.date=date.getFullYear()+'-'+pad((date.getMonth()+1),2)+'-'+pad(date.getDay(),2)+' '+pad(date.getHours(),2)+':'+pad(date.getMinutes(),2)+':'+pad(date.getSeconds(),2);
+                xhr.send("obj=["+JSON.stringify(obj)+"]");
+                xhr.onreadystatechange=function(){
+                    var timer=null;
+                    var speed=100;
+                    if(xhr.readyState===4&&xhr.status===200){
+                        var insertId=JSON.parse(xhr.responseText).insertId;
+                        content.innerHTML='<div class="liuyan change" data-contentId='+insertId+'><span class="name">网友&nbsp;&nbsp;:&nbsp;&nbsp;</span><span class="userName">'+userName+'</span><span class="time">发表时间:<span>'+obj.date+'</span></span><div class="del" style="display:block"><a href="#">删除</a></div><br><span class="neirong">'+obj.content+'</span></div>'+content.innerHTML;
+
+                       //设置定时器让滚动条回到顶部
+                       timer=setInterval(function(){
+                            speed=speed+5;
+                            if(parseInt(content.scrollTop)>0){
+                                content.scrollTop-=speed;
+                            }else{
+                                clearInterval(timer);
+                            }
+                       },100)
+                    }
+                }
+            }
+        }
+        content.onclick=function(e){
+            var objDel={};
+
+            if(e.target.innerHTML=='删除'){
+                var eParent=e.target.parentNode.parentNode;
+                eParent.style.display="none";
+                var xhr=new XMLHttpRequest();
+                xhr.open('post','/deleteContent',true);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange=function(){
+                    if(xhr.readyState===4&&xhr.status===200){
+                        alert('成功删除')
+                    }
+                }
+                objDel.contentId=eParent.getAttribute('data-contentId')
+                console.log(objDel)
+                xhr.send("objDel=["+JSON.stringify(objDel)+"]");
+            }
+        }
+
+        //退出系统
+        exits.onclick=function(){
+            localStorage.setItem('userName','');
+            localStorage.setItem('userId','');
+            location.assign('留言.html');
+        }
+
+        // 数字补0
+        function pad(str,num){
+            var len=str.toString().length;
+            while(len<num){
+                str='0'+str;
+                len++;
+            }
+            return str;
+        }
+    </script>  -->
+</body>
+</html>
